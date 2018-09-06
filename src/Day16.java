@@ -21,9 +21,9 @@ import java.util.Scanner;
 */
 public class Day16 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String S = in.next();
-        try {
+        // updated to use try-with-resources instead so that the Scanner will be closed automatically after try/catch block
+        try (Scanner in = new Scanner(System.in)) {
+            String S = in.next();
             int input = Integer.parseInt(S);
             System.out.println(input);
         } catch (NumberFormatException e) {
