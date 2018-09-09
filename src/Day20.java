@@ -40,13 +40,15 @@ public class Day20 {
         int numOfSwaps = 0;
 
         for(int last = arr.length - 1; last > 0; last--) {
+            boolean swapped = false;
             for(int j = 0; j < last; j++) {
                 if(arr[j] > arr[j+1]) {
                     swap(arr, j, j+1);
                     numOfSwaps++;
+                    swapped = true;
                 }
             }
-            if(numOfSwaps == 0) break;
+            if(swapped == false) break;
         }
 
         System.out.println("Array is sorted in " + numOfSwaps + " swaps.");
