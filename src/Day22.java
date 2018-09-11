@@ -71,4 +71,3 @@ public class Day22 {
         System.out.println(height);
     }
 }
-}
